@@ -1,0 +1,45 @@
+{
+  "name": "nexus-games",
+  "version": "1.0.0",
+  "description": "Console-style game library and launcher",
+  "main": "src/main.mjs",
+  "scripts": {
+    "start": "electron ."
+  },
+  "type": "module",
+  "devDependencies": {
+    "electron": "^45.2.1"
+  },
+  "private": true,
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "author": "Arjun",
+  "build": {
+    "appId": "com.gamer.app",
+    "productName": "Gamer",
+    "executableName": "Gamer",
+    "files": [
+      "src/**/*",
+      "build/icon.ico",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Gamer",
+      "runAfterFinish": false,
+      "deleteAppDataOnUninstall": false,
+      "include": "build/installer.nsh"
+    }
+  }
+}

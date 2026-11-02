@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' https: data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>Gamer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="bg" aria-hidden="true"><div class="bg-img"></div><div class="bg-img"></div><div class="bg-shade"></div></div>
+
+  <header id="top">
+    <button class="profile nav" title="Xbox profile"><span class="avatar">N</span></button>
+    <nav class="tabs" id="tabs">
+      <button class="nav" data-tab="home">Home</button>
+      <button class="nav" data-tab="library">My games</button>
+      <button class="nav" data-tab="gamepass">Game Pass</button>
+      <button class="nav" data-tab="captures">Captures</button>
+      <button class="nav" data-tab="stats">Stats</button>
+      <button class="nav" data-tab="xbox">Profile</button>
+    </nav>
+    <div class="top-right">
+      <label class="search"><input id="search" class="nav" placeholder="Search" spellcheck="false" /></label>
+      <span id="pad" class="sys" hidden title="Controller connected">◉ Controller</span>
+      <span id="battery" class="sys"></span>
+      <span id="clock" class="sys clock"></span>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <div id="detail" class="sheet" hidden></div>
+  <div id="viewer" class="viewer" hidden></div>
+  <div id="drop" hidden><div>Drop games here<small>.exe, shortcuts (.lnk) or links (.url)</small></div></div>
+  <div id="toast" hidden></div>
+  <footer id="hints"></footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
